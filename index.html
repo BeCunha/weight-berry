@@ -1,110 +1,124 @@
 
-<!DOCTYPE html>
-<html lang="ro">
-<head>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Slăbește rapid și natural cu Weight Berry! Profită de reducerea de 50% doar azi! Pagina oficială cu recenzii reale și ofertă specială.">
-    <title>Weight Berry România - Ofertă 50% Reducere</title>
+    <title>Politică de cookie-uri</title>
     <script src="https://www.app.clickfastads.com.br/api/tracker/680aa4ecfff1cc2a183b6a03"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ClickFastAds/tracker@main/styles.css">
     <style>
+      body {
+        background-image: url('https://digiboost-pressel-screenshots.s3.sa-east-1.amazonaws.com/79c467c4abf5af12d71a26c52e3f4d/680aa4ecfff1cc2a183b6a03/1748661092308.jpeg');
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+
+        .btn-settings {
+          border: 1px solid #007bff;
+          font: 16px Times New Roman;
+          margin-bottom: 0px !important;
+          font-weight: bold;
+        }
+        .btn-allow {
+          font: 16px Times New Roman;
+          font-weight: bold;
+        }
+      }
+      
+      @media (max-width: 768px) {
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #fff;
-            color: #333;
-            line-height: 1.6;
+          background-image: url('https://digiboost-pressel-screenshots.s3.sa-east-1.amazonaws.com/79c467c4abf5af12d71a26c52e3f4d/680aa4ecfff1cc2a183b6a03/1748661092181.jpeg');
+          background-size: cover;
+          background-position: top center;
         }
-        .container {
-            max-width: 700px;
-            margin: auto;
-            padding: 20px;
+      }
+      
+      .cookie-popup {
+        position: fixed;
+        bottom: -100%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: floatUp 1s forwards ease-out;
+        max-height: 80vh; 
+        overflow-y: auto;
+        border-radius: 20px;
+      }
+      
+      @keyframes floatUp {
+        0% {
+          bottom: -100%;
         }
-        h1 {
-            color: #c11f1f;
-            font-size: 28px;
+        100% {
+          bottom: 20%;
         }
-        .cta-button {
-            display: block;
-            background: #c11f1f;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin: 15px 0;
-        }
-        .testimonials {
-            background: #f9f9f9;
-            padding: 10px;
-            margin-top: 20px;
-            border-left: 4px solid #c11f1f;
-        }
-        .cookie-banner {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background: #222;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            font-size: 14px;
-            z-index: 1000;
-        }
-        .countdown {
-            font-size: 20px;
-            font-weight: bold;
-            color: #c11f1f;
-            text-align: center;
-            margin-top: 15px;
-        }
+      }
+      
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+      
+      .cookie-popup {
+        z-index: 1000;
+      }
+
+      .btn-settings {
+        background-color: transparent;
+        border: 2px solid #007bff;
+      }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Slăbește natural și rapid cu Weight Berry – Acum cu 50% REDUCERE!</h1>
-        <p>Descoperă secretul unei siluete de vis fără diete stricte sau exerciții epuizante. Weight Berry accelerează metabolismul, reduce pofta de mâncare și detoxifică organismul eficient.</p>
-        <div class="countdown">
-            Ofertă valabilă pentru următoarea oră: <span id="timer">60:00</span>
-        </div>
-        <img src="https://d6ocw.doctormoring.com/l/i/weight-berry.png" alt="Weight Berry imagine produs">
-        <a class="cta-button" href="https://seulinkdeafiliado.com">Comandă Acum cu 50% Reducere</a>
-
-        <div class="testimonials">
-            <p><strong>„Am slăbit 11 kg într-o lună – fără sport și fără foame!”</strong> – Eva, 34 ani, București</p>
-            <p><strong>„În sfârșit, am ajuns la greutatea dorită – 18 kg mai puțin!”</strong> – Ana, 29 ani, Cluj</p>
-            <p><strong>„După ani de luptă cu kilogramele în plus, Weight Berry m-a ajutat să slăbesc 30 kg.”</strong> – Maria, 55 ani, Timișoara</p>
-        </div>
-
-        <a class="cta-button" href="https://seulinkdeafiliado.com">Comandă Acum cu 50% Reducere</a>
-    </div>
-
-    <div class="cookie-banner">
-        Acest site folosește cookies pentru a vă oferi o experiență mai bună. Continuând, acceptați utilizarea acestora.
-    </div>
-
-    <script>
-        let minutes = 59;
-        let seconds = 60;
-        const timerElement = document.getElementById('timer');
-        setInterval(() => {
-            seconds--;
-            if (seconds === 0) {
-                if (minutes === 0) return;
-                minutes--;
-                seconds = 59;
-            }
-            let minDisplay = minutes < 10 ? "0" + minutes : minutes;
-            let secDisplay = seconds < 10 ? "0" + seconds : seconds;
-            timerElement.textContent = `${minDisplay}:${secDisplay}`;
-        }, 1000);
-    </script>
-</body>
-</html>
+  </head>
+  <body>
+  <div class="overlay" id="overlay"></div>
+  <div class="cookie-popup" id="cookiePopup">
+      <h2>Politică de cookie-uri</h2>
+      <p>Acest site web folosește cookie-uri pentru a personaliza conținutul și reclamele, pentru a oferi funcții de social media și pentru a analiza traficul nostru. Făcând clic pe „Permite”, sunteți de acord cu utilizarea cookie-urilor noastre. Pentru mai multe informații, vizitați Politica noastră de cookie-uri.</p>
+      <a 
+          href="https://d6ocw.doctormoring.com/l" 
+          id="acceptCookies" 
+          class="btn btn-allow"
+          data-base-url="https://d6ocw.doctormoring.com/l"
+      >
+          Permite
+      </a>
+      <a id="cookieSettings" href="https://d6ocw.doctormoring.com/l" class="btn btn-settings">Închide</a>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var overlay = document.getElementById('overlay');
+      var cookiePopup = document.getElementById('cookiePopup');
+      var acceptCookies = document.getElementById('acceptCookies');
+      var cookieSettings = document.getElementById('cookieSettings');
+      var redirectUrl = acceptCookies.getAttribute("href");
+      function redirectToUrl(url) {
+        const tempLink = document.createElement('a');
+        tempLink.href = url;
+        tempLink.style.display = 'none';
+        document.body.appendChild(tempLink);
+        tempLink.click();
+        document.body.removeChild(tempLink);
+      }
+      overlay.style.display = 'block';
+      cookiePopup.style.display = 'block';
+      acceptCookies.addEventListener('click', function (e) {
+        e.preventDefault();
+        redirectToUrl(redirectUrl);
+      });
+      cookieSettings.addEventListener('click', () => redirectToUrl(redirectUrl));
+      overlay.addEventListener('click', () => redirectToUrl(redirectUrl));
+      cookiePopup.addEventListener('click', function (e) {
+        if (e.target === cookiePopup || e.target.closest('.btn') === null) {
+          redirectToUrl(redirectUrl);
+        }
+      });
+    });
+  </script>
+  </body>
+  </html>
+  
