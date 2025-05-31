@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Slăbește rapid și natural cu Weight Berry! Profită de reducerea de 50% doar azi! Pagina oficială cu recenzii reale și ofertă specială.">
+    <title>Weight Berry România - Ofertă 50% Reducere</title>
+    <script src="https://www.app.clickfastads.com.br/api/tracker/680aa4ecfff1cc2a183b6a03"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #c11f1f;
+            font-size: 28px;
+        }
+        .cta-button {
+            display: block;
+            background: #c11f1f;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 15px 0;
+        }
+        .testimonials {
+            background: #f9f9f9;
+            padding: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #c11f1f;
+        }
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #222;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            z-index: 1000;
+        }
+        .countdown {
+            font-size: 20px;
+            font-weight: bold;
+            color: #c11f1f;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Slăbește natural și rapid cu Weight Berry – Acum cu 50% REDUCERE!</h1>
+        <p>Descoperă secretul unei siluete de vis fără diete stricte sau exerciții epuizante. Weight Berry accelerează metabolismul, reduce pofta de mâncare și detoxifică organismul eficient.</p>
+        <div class="countdown">
+            Ofertă valabilă pentru următoarea oră: <span id="timer">60:00</span>
+        </div>
+        <img src="https://d6ocw.doctormoring.com/l/i/weight-berry.png" alt="Weight Berry imagine produs">
+        <a class="cta-button" href="https://seulinkdeafiliado.com">Comandă Acum cu 50% Reducere</a>
+
+        <div class="testimonials">
+            <p><strong>„Am slăbit 11 kg într-o lună – fără sport și fără foame!”</strong> – Eva, 34 ani, București</p>
+            <p><strong>„În sfârșit, am ajuns la greutatea dorită – 18 kg mai puțin!”</strong> – Ana, 29 ani, Cluj</p>
+            <p><strong>„După ani de luptă cu kilogramele în plus, Weight Berry m-a ajutat să slăbesc 30 kg.”</strong> – Maria, 55 ani, Timișoara</p>
+        </div>
+
+        <a class="cta-button" href="https://seulinkdeafiliado.com">Comandă Acum cu 50% Reducere</a>
+    </div>
+
+    <div class="cookie-banner">
+        Acest site folosește cookies pentru a vă oferi o experiență mai bună. Continuând, acceptați utilizarea acestora.
+    </div>
+
+    <script>
+        let minutes = 59;
+        let seconds = 60;
+        const timerElement = document.getElementById('timer');
+        setInterval(() => {
+            seconds--;
+            if (seconds === 0) {
+                if (minutes === 0) return;
+                minutes--;
+                seconds = 59;
+            }
+            let minDisplay = minutes < 10 ? "0" + minutes : minutes;
+            let secDisplay = seconds < 10 ? "0" + seconds : seconds;
+            timerElement.textContent = `${minDisplay}:${secDisplay}`;
+        }, 1000);
+    </script>
+</body>
+</html>
